@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://preline.co/">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Perfect for showcasing professional background in a CV/Resume format, highlighting skills, experiences, and achievements.">
+
+  <meta name="twitter:site" content="@preline">
+  <meta name="twitter:creator" content="@preline">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Personal Tailwind CSS Template | Preline UI, crafted with Tailwind CSS">
+  <meta name="twitter:description" content="Perfect for showcasing professional background in a CV/Resume format, highlighting skills, experiences, and achievements.">
+  <meta name="twitter:image" content="https://preline.co/assets/img/og-image.png">
+
+  <meta property="og:url" content="https://preline.co/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Preline">
+  <meta property="og:title" content="Personal Tailwind CSS Template | Preline UI, crafted with Tailwind CSS">
+  <meta property="og:description" content="Perfect for showcasing professional background in a CV/Resume format, highlighting skills, experiences, and achievements.">
+  <meta property="og:image" content="https://preline.co/assets/img/og-image.png">
+
+  <!-- Title -->
+  <title>Albuca</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Theme Check and Update -->
+  <script>
+    const html = document.querySelector('html');
+    const isLightOrAuto = localStorage.getItem('hs_theme') === 'light' || (localStorage.getItem('hs_theme') === 'auto' && !window.matchMedia('(prefers-color-scheme: dark)').matches);
+    const isDarkOrAuto = localStorage.getItem('hs_theme') === 'dark' || (localStorage.getItem('hs_theme') === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+    if (isLightOrAuto && html.classList.contains('dark')) html.classList.remove('dark');
+    else if (isDarkOrAuto && html.classList.contains('light')) html.classList.remove('light');
+    else if (isDarkOrAuto && !html.classList.contains('dark')) html.classList.add('dark');
+    else if (isLightOrAuto && !html.classList.contains('light')) html.classList.add('light');
+  </script>
+
+  <script src="https://kit.fontawesome.com/d8c48c910d.js" crossorigin="anonymous"></script>
+
+  <!-- CSS Preline -->
+  <link rel="stylesheet" href="https://preline.co/assets/css/main.min.css">
+</head>
+
+<body class="dark:bg-neutral-900">
+  <!-- ========== HEADER ========== -->
+  <header class="sticky top-0 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm">
+    <nav class="mt-4 relative max-w-2xl w-full bg-white border border-gray-200 rounded-[2rem] mx-2 py-2.5 md:flex md:items-center md:justify-between md:py-0 md:px-4 md:mx-auto dark:bg-neutral-900 dark:border-neutral-700">
+      <div class="px-4 md:px-0 flex justify-between items-center">
+        
+        <div class="md:hidden">
+          <!-- Toggle Button -->
+          <button type="button" class="hs-collapse-toggle flex justify-center items-center size-6 border border-gray-200 text-gray-500 rounded-full hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" id="hs-navbar-header-floating-collapse" aria-expanded="false" aria-controls="hs-navbar-header-floating" aria-label="Toggle navigation" data-hs-collapse="#hs-navbar-header-floating">
+            <svg class="hs-collapse-open:hidden shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" x2="21" y1="6" y2="6" />
+              <line x1="3" x2="21" y1="12" y2="12" />
+              <line x1="3" x2="21" y1="18" y2="18" />
+            </svg>
+            <svg class="hs-collapse-open:block hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
+          </button>
+          <!-- End Toggle Button -->
+        </div>
+      </div>
+
+      <div id="hs-navbar-header-floating" class="hidden hs-collapse overflow-hidden transition-all duration-300 basis-full grow md:block" aria-labelledby="hs-navbar-header-floating-collapse">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-end gap-2 md:gap-3 mt-3 md:mt-0 py-2 md:py-0 md:ps-7">
+          <a class="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-gray-800 font-medium text-gray-800 focus:outline-none dark:border-neutral-200 dark:text-neutral-200" href="#" aria-current="page">Home</a>
+          <!-- <a class="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200" href="#projects">Projetos</a> -->
+          <a class="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200" href="#experience">Experiência</a>
+          <a class="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200" href="#articles">Artigos</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- ========== END HEADER ========== -->
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main id="content">
+    <div class="w-full max-w-2xl mx-auto pt-10 md:pt-16 px-4 sm:px-6 lg:px-8">
+      <!-- Profile -->
+      <div class="flex items-center gap-x-3">
+        <div class="shrink-0">
+          <img class="shrink-0 size-16 rounded-full" src="./assets/me.jpeg" alt="Avatar">
+        </div>
+
+        <div class="grow">
+          <h1 class="text-lg font-medium text-gray-800 dark:text-neutral-200">
+            Gabriel de Albuquerque (Albuca)
+          </h1>
+          <p class="text-sm text-gray-600 dark:text-neutral-400">
+            Engenheiro de Software
+          </p>
+        </div>
+      </div>
+      <!-- End Profile -->
+
+      <!-- About -->
+      <div class="mt-8" id="home">
+        <p class="text-sm text-gray-600 dark:text-neutral-400">
+          Oi! Sou Gabriel de Albuquerque (mas pode me chamar de Albuca), desenvolvedor de software com formação em Análise e Desenvolvimento de Sistemas e anos de experiência no mercado. Especialista em PHP, tenho trabalhado com essa ferramenta desde antes de começar a faculdade, e também tenho experiência com Go, Python e TypeScript, o que me ajuda a resolver desafios de forma eficiente e escalável.
+        </p>
+
+        <p class="mt-3 text-sm text-gray-600 dark:text-neutral-400">
+            Tenho experiência no setor financeiro, tendo trabalhado em financeiras, bancos e empresas que oferecem serviços bancários, contribuindo com soluções robustas e inovadoras para o segmento bancário brasileiro.
+        </p>
+
+        <ul class="mt-5 flex flex-col gap-y-3">
+          <li class="flex items-center gap-x-2.5">
+            <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+            <a class="text-[13px] text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="#">
+              albuquerque.se@proton.me
+            </a>
+          </li>
+
+          <li class="flex items-center gap-x-2.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 size-3.5 bi bi-github" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+              </svg>
+            <a class="text-[13px] text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="#">
+              @albuquerque53
+            </a>
+          </li>
+
+          <li class="flex items-center gap-x-2.5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="shrink-0 size-3.5 bi bi-medium" viewBox="0 0 16 16">
+                  <path d="M9.025 8c0 2.485-2.02 4.5-4.513 4.5A4.506 4.506 0 0 1 0 8c0-2.486 2.02-4.5 4.512-4.5A4.506 4.506 0 0 1 9.025 8m4.95 0c0 2.34-1.01 4.236-2.256 4.236S9.463 10.339 9.463 8c0-2.34 1.01-4.236 2.256-4.236S13.975 5.661 13.975 8M16 8c0 2.096-.355 3.795-.794 3.795-.438 0-.793-1.7-.793-3.795 0-2.096.355-3.795.794-3.795.438 0 .793 1.699.793 3.795"/>
+              </svg>
+            <a class="text-[13px] text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="#">
+              @albuquerque53
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- End About -->
+
+      <!--
+      <div class="mt-10 sm:mt-14" id="projects">
+        <h2 class="mb-5 font-medium text-gray-800 dark:text-neutral-200">
+          Desenvolvedor para o open source, visionários individuais e enterprise:
+        </h2>
+
+        <div class="flex justify-between gap-6">
+            <svg class="py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 text-neutral-400" enable-background="new 0 0 2499 614" viewBox="0 0 2499 614" xmlns="http://www.w3.org/2000/svg">
+              <path d="m431.7 0h-235.5v317.8h317.8v-235.5c0-45.6-36.7-82.3-82.3-82.3zm-308.9 0h-40.5c-45.6 0-82.3 36.7-82.3 82.3v40.5h122.8zm-122.8 196.2h122.8v122.8h-122.8zm392.5 317.8h40.5c45.6 0 82.3-36.7 82.3-82.3v-39.2h-122.8zm-196.3-121.5h122.8v122.8h-122.8zm-196.2 0v40.5c0 45.6 36.7 82.3 82.3 82.3h40.5v-122.8zm828-359.6h-48.1v449.4h254.5v-43h-206.4zm360.8 119c-93.7 0-159.5 69.6-159.5 169.6v11.5c1.3 43 20.3 83.6 51.9 113.9 30.4 27.9 69.6 44.3 111.4 44.3h6.3c44.3 0 86.1-16.5 119-44.3l1.3-1.3-21.5-35.4-2.5 1.3c-26.6 24.1-59.5 38-94.9 38-58.2 0-117.7-38-121.5-122.8h243.1v-2.5s1.3-15.2 1.3-22.8c-.3-91.2-53.4-149.5-134.4-149.5zm-108.9 134.2c10.1-57 51.9-93.7 106.3-93.7 40.5 0 84.8 24.1 88.6 93.7zm521.6-96.2v16.5c-20.3-34.2-58.2-55.7-97.5-55.7h-3.8c-86.1 0-145.6 68.4-145.6 168.4 0 101.3 57 169.6 141.8 169.6 67.1 0 97.5-40.5 107.6-58.2v49.4h45.6v-447h-46.8v157zm-98.8 257c-59.5 0-98.7-50.6-98.7-126.6 0-73.4 41.8-125.3 100-125.3 49.4 0 98.7 39.2 98.7 125.3 0 93.7-51.9 126.6-100 126.6zm424.1-250.7v2.5c-8.9-15.2-36.7-48.1-103.8-48.1-84.8 0-140.5 64.6-140.5 163.3s58.2 165.8 144.3 165.8c46.8 0 78.5-16.5 100-50.6v44.3c0 62-39.2 97.5-108.9 97.5-29.1 0-59.5-7.6-86.1-21.5l-2.5-1.3-17.7 39.2 2.5 1.3c32.9 16.5 69.6 25.3 105.1 25.3 74.7 0 154.4-38 154.4-143.1v-311.3h-46.8zm-93.7 241.8c-62 0-102.5-48.1-102.5-122.8 0-76 35.4-119 96.2-119 67.1 0 98.7 39.2 98.7 119 1.3 78.5-31.6 122.8-92.4 122.8zm331.7-286.1c-93.7 0-158.2 69.6-158.2 168.4v11.4c1.3 43 20.3 83.6 51.9 113.9 30.4 27.9 69.6 44.3 111.4 44.3h6.3c44.3 0 86.1-16.5 119-44.3l1.3-1.3-22.8-35.4-2.5 1.3c-26.6 24.1-59.5 38-94.9 38-58.2 0-117.7-38-121.5-122.8h244.2v-2.5s1.3-15.2 1.3-22.8c0-89.9-53.2-148.2-135.5-148.2zm-107.6 134.2c10.1-57 51.9-93.7 106.3-93.7 40.5 0 84.8 24.1 88.6 93.7zm440.6-127.9c-6.3-1.3-11.4-1.3-17.7-2.5-44.3 0-81 27.9-100 74.7v-72.2h-46.8l1.3 320.3v2.5h48.1v-135.4c0-20.3 2.5-41.8 8.9-60.8 15.2-49.4 49.4-81 89.9-81 5.1 0 10.1 0 15.2 1.3h2.5v-46.8z" fill="currentColor" />
+            </svg>
+
+            <svg class="py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 text-neutral-400" xmlns="http://www.w3.org/2000/svg" viewBox="-4.126838974812941 0.900767442746961 939.436838974813 230.18142889845947" width="2500" height="607">
+              <path d="M667.21 90.58c-13.76 0-23.58 4.7-28.4 13.6l-2.59 4.82V92.9h-22.39v97.86h23.55v-58.22c0-13.91 7.56-21.89 20.73-21.89 12.56 0 19.76 7.77 19.76 21.31v58.8h23.56v-63c0-23.3-12.79-37.18-34.22-37.18zm-114.21 0c-27.79 0-45 17.34-45 45.25v13.74c0 26.84 17.41 43.51 45.44 43.51 18.75 0 31.89-6.87 40.16-21l-14.6-8.4c-6.11 8.15-15.87 13.2-25.55 13.2-14.19 0-22.66-8.76-22.66-23.44v-3.89h65.73v-16.23c0-26-17.07-42.74-43.5-42.74zm22.09 43.15h-44.38v-2.35c0-16.11 7.91-25 22.27-25 13.83 0 22.09 8.76 22.09 23.44zm360.22-56.94V58.07h-81.46v18.72h28.56V172h-28.56v18.72h81.46V172h-28.57V76.79zM317.65 55.37c-36.38 0-59 22.67-59 59.18v19.74c0 36.5 22.61 59.18 59 59.18s59-22.68 59-59.18v-19.74c-.01-36.55-22.65-59.18-59-59.18zm34.66 80.27c0 24.24-12.63 38.14-34.66 38.14S283 159.88 283 135.64v-22.45c0-24.24 12.64-38.14 34.66-38.14s34.66 13.9 34.66 38.14zm98.31-45.06c-12.36 0-23.06 5.12-28.64 13.69l-2.53 3.9V92.9h-22.4v131.53h23.56v-47.64l2.52 3.74c5.3 7.86 15.65 12.55 27.69 12.55 20.31 0 40.8-13.27 40.8-42.93v-16.64c0-21.37-12.63-42.93-41-42.93zM468.06 149c0 15.77-9.2 25.57-24 25.57-13.8 0-23.43-10.36-23.43-25.18v-14.72c0-15 9.71-25.56 23.63-25.56 14.69 0 23.82 9.79 23.82 25.56zm298.47-90.92L719 190.76h23.93l9.1-28.44h54.64l.09.28 9 28.16h23.92L792.07 58.07zm-8.66 85.53l21.44-67.08 21.22 67.08zM212.59 95.12a57.27 57.27 0 0 0-4.92-47.05 58 58 0 0 0-62.4-27.79A57.29 57.29 0 0 0 102.06 1a57.94 57.94 0 0 0-55.27 40.14A57.31 57.31 0 0 0 8.5 68.93a58 58 0 0 0 7.13 67.94 57.31 57.31 0 0 0 4.92 47A58 58 0 0 0 83 211.72 57.31 57.31 0 0 0 126.16 231a57.94 57.94 0 0 0 55.27-40.14 57.3 57.3 0 0 0 38.28-27.79 57.92 57.92 0 0 0-7.12-67.95zM126.16 216a42.93 42.93 0 0 1-27.58-10c.34-.19 1-.52 1.38-.77l45.8-26.44a7.43 7.43 0 0 0 3.76-6.51V107.7l19.35 11.17a.67.67 0 0 1 .38.54v53.45A43.14 43.14 0 0 1 126.16 216zm-92.59-39.54a43 43 0 0 1-5.15-28.88c.34.21.94.57 1.36.81l45.81 26.45a7.44 7.44 0 0 0 7.52 0L139 142.52v22.34a.67.67 0 0 1-.27.6l-46.3 26.72a43.14 43.14 0 0 1-58.86-15.77zm-12-100A42.92 42.92 0 0 1 44 57.56V112a7.45 7.45 0 0 0 3.76 6.51l55.9 32.28L84.24 162a.68.68 0 0 1-.65.06L37.3 135.33a43.13 43.13 0 0 1-15.77-58.87zm159 37l-55.9-32.28L144 70a.69.69 0 0 1 .65-.06l46.29 26.73a43.1 43.1 0 0 1-6.66 77.76V120a7.44 7.44 0 0 0-3.74-6.54zm19.27-29c-.34-.21-.94-.57-1.36-.81L152.67 57.2a7.44 7.44 0 0 0-7.52 0l-55.9 32.27V67.14a.73.73 0 0 1 .28-.6l46.29-26.72a43.1 43.1 0 0 1 64 44.65zM78.7 124.3l-19.36-11.17a.73.73 0 0 1-.37-.54V59.14A43.09 43.09 0 0 1 129.64 26c-.34.19-.95.52-1.38.77l-45.8 26.44a7.45 7.45 0 0 0-3.76 6.51zm10.51-22.67l24.9-14.38L139 101.63v28.74l-24.9 14.38-24.9-14.38z" fill="currentColor" />
+            </svg>
+
+            <svg class="py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 text-neutral-400" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2428 1002">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M311.5 389.8h191.8l67 117.5 77.8-117.5h178.3L682.7 590.7l154 220.7H648.1l-77.8-135.8-91.7 135.8h-175l153.2-220.7-145.3-200.9Z" fill="currentColor" />
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M1279.3 640.7H955.4c2.9 26 10 45.2 21 58a76.5 76.5 0 0 0 61.1 27.3c16 0 31.5-4 45.3-12 8.8-5 18.2-13.7 28.2-26.5l159.2 14.7c-24.4 42.4-53.7 72.7-88 91.2-34.5 18.2-83.8 27.5-148.2 27.5-55.8 0-99.7-7.9-131.8-23.6a193.2 193.2 0 0 1-79.6-75c-21-34.4-31.6-74.6-31.6-121 0-65.8 21.2-119.2 63.3-159.8 42.3-40.8 100.6-61.3 175-61.3 60.3 0 108 9.2 142.8 27.5a184 184 0 0 1 79.8 79.3c18.3 34.7 27.4 79.8 27.4 135.3v18.4ZM1115 563.3c-3.2-31.3-11.6-53.7-25.2-67.1a73.1 73.1 0 0 0-53.8-20.3 73.6 73.6 0 0 0-61.6 30.6c-9.7 12.7-16 31.6-18.5 56.8H1115Zm137-173.5h168.3l81.9 267.1 84.5-267H1750l-179.1 421.5h-143.3L1252 389.8Zm463.2 212c0-64.3 21.7-117.4 65-159 43.5-41.7 102-62.6 176-62.6 84.4 0 148.2 24.5 191.3 73.5 34.6 39.4 52 88 52 145.8 0 64.7-21.5 117.8-64.5 159.3-43 41.3-102.4 62-178.5 62-67.7 0-122.5-17.1-164.3-51.5-51.4-42.6-77-98.4-77-167.6Zm162-.5c0 37.7 7.5 65.5 22.8 83.4a72 72 0 0 0 57.3 27.1c23.4 0 42.5-9 57.4-26.7 15-17.8 22.5-46 22.5-85.4 0-36.4-7.6-63.7-22.7-81.5a70.5 70.5 0 0 0-56-26.7c-23.5 0-43 9-58.3 27-15.4 18.2-23 45.9-23 82.8ZM2363.1.1a64 64 0 0 1 0 127.9 64 64 0 0 1 0-128Z" fill="currentColor" />
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M1912.1 671.5c220.3-135 326.4-327 334-419.2 8.7-106.7-71-235.9-358.9-238-345 3.6-790 158.3-1163.6 360.4h138c315.8-152.6 672-266.2 1000.8-275.2 287.7-7.8 304.4 149.2 302 199-3.6 71-74.7 234.5-252.3 373Zm-1315.7-222-36 22.7 10 17.5 26-40.1ZM419.8 567.5C212 717 57 873.2.8 1001.9 77.8 897.1 217 771 394.9 647l40.4-58.1-15.5-21.4Z" fill="currentColor" />
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M2036.3 580a819.8 819.8 0 0 0 114.2-122.8l-3-3.5c-8-9.2-17-17.5-26.5-25-21 39.8-50 83.7-88.2 128.3 1.6 7 2.8 14.7 3.5 23Z" fill="currentColor" />
+            </svg>
+
+            <svg class="py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 text-neutral-400" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127 33">
+              <path d="M9.3 16.5C9.3 9 14.3 2.7 21.2.7a16.5 16.5 0 1 0 0 31.6c-6.9-2-11.9-8.3-11.9-15.8Z" fill="currentColor" />
+              <path d="M21.7 10c4 0 7.4 2.8 8.5 6.4a8.9 8.9 0 1 0-17 0c1-3.6 4.4-6.3 8.5-6.3Z" fill="currentColor" />
+              <path d="M24.8 19.4c0 3-2 5.5-4.8 6.3A6.6 6.6 0 1 0 20 13c2.8.8 4.8 3.4 4.8 6.4Z" fill="currentColor" />
+              <path d="M39.6 13.5A4.4 4.4 0 0 1 44 9.1h1.3v2.7l-1 .2-1 .6-.2.4-.1.5h2.3v3H43v9.2h-3.4v-9.3h-1.3v-2.9h1.3ZM55.7 13.5h3.4v6.1a6.9 6.9 0 0 1-1.7 4.6 6 6 0 0 1-4.5 1.8c-1 0-1.8-.1-2.5-.5a6 6 0 0 1-3.2-3.4c-.3-.8-.4-1.6-.4-2.5v-6H50v6c0 .5 0 1 .2 1.3l.5 1c.2.4.5.6.9.8.3.2.8.3 1.2.3a2.6 2.6 0 0 0 2.1-1c.3-.3.4-.7.5-1l.2-1.4v-6ZM61.2 25.7V9.5h3.4v16.2h-3.4ZM66.9 25.7V9.5h3.3v16.2H67ZM78.5 21.2l3.3-7.7h3.7l-5.7 12.2h-2.7l-5.6-12.2H75l3.4 7.7ZM87 13.5h3.3v12.2H87V13.5Zm1.6-5 .8.1.6.4.4.7.2.7a1.9 1.9 0 0 1-.6 1.4l-.6.4a2 2 0 0 1-.8.1c-.5 0-1-.2-1.3-.5a2 2 0 0 1-.4-2.1c0-.3.2-.5.4-.7l.6-.4.7-.1ZM98.8 13.2a6.7 6.7 0 0 1 4.8 1.9 6.3 6.3 0 0 1 1.9 5.7h-9.8a3.3 3.3 0 0 0 3.2 2.2c.5 0 1-.1 1.4-.4.5-.2.9-.5 1.2-1h3.7c-.2.7-.5 1.3-1 1.8a6.1 6.1 0 0 1-3.3 2.3 7 7 0 0 1-6.9-1.6 6.1 6.1 0 0 1-2-4.5 6.1 6.1 0 0 1 2-4.5c.7-.6 1.4-1 2.2-1.4.8-.3 1.7-.5 2.6-.5Zm3.2 5.2c-.3-.6-.7-1.1-1.2-1.5-.6-.4-1.3-.7-2-.7s-1.4.3-2 .7c-.5.4-.9.9-1.1 1.5h6.3ZM123 13.5h3.6l-5 12.2H119l-2.5-6.5-2.5 6.5h-2.7l-5-12.2h3.6l2.7 7 2.8-7h2.2l2.8 7 2.7-7Z" fill="currentColor" />
+            </svg>
+
+            <svg class="py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 text-neutral-400" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 88 22" xml:space="preserve" enable-background="new 0 0 88 22">
+              <path d="M36.3 14.6a7.3 7.3 0 0 1-5.6 2.8c-3.8 0-6.8-2.7-6.8-6.2a6 6 0 0 1 2-4.5A6 6 0 0 1 30.5 5c2.2 0 4.3 1 5.6 2.8l-2.5 1.8a3.7 3.7 0 0 0-3.1-1.8 3.5 3.5 0 0 0-3.5 3.5c.1 2 1.7 3.5 3.6 3.5 1.3 0 2.5-.6 3.2-1.7l2.5 1.5z" fill="currentColor" />
+              <path d="M37.7 0H40.8V17.1H37.7z" fill="currentColor" />
+              <path d="M49.1 14.7c2 0 3.7-1.6 3.8-3.6-.1-2-1.8-3.6-3.8-3.6s-3.7 1.6-3.8 3.6c.1 2 1.7 3.6 3.8 3.6m0-9.8c1.7-.1 3.4.5 4.7 1.7 1.3 1.2 2 2.8 2.1 4.5a6.4 6.4 0 0 1-2.1 4.5 6.4 6.4 0 0 1-4.7 1.7c-3.8 0-6.8-2.7-6.8-6.2s3-6.2 6.8-6.2" fill="currentColor" />
+              <path d="M55.3 5.1 59 5.1 62 11.5 65.2 5.1 68.6 5.1 62 17.8z" fill="currentColor" />
+              <path d="M77.5 9.4a3 3 0 0 0-2.9-1.9c-1.3 0-2.5.7-3.1 1.9h6zm2 6.3a7 7 0 0 1-4.6 1.6c-3.8 0-6.8-2.7-6.8-6.2 0-1.7.7-3.3 1.9-4.5a6 6 0 0 1 4.6-1.7c1.7-.1 3.3.6 4.5 1.8s1.8 2.8 1.7 4.5v.8h-9.6a3.9 3.9 0 0 0 6.5 1.5l1.8 2.2zm2.8-5.3c0-2.9 2.2-5.2 5.7-5.2V8c-.7 0-1.5.3-2 .8s-.7 1.3-.6 2v6.3h-3.1v-6.7z" fill="currentColor" />
+              <path d="M9.7 5.6a5 5 0 0 0-8.3-3.5C0 3.5-.4 5.6.3 7.4s2.5 3 4.5 3h4.9V5.6zm1.4 0a5 5 0 0 1 8.3-3.5c1.4 1.4 1.8 3.5 1.1 5.3s-2.5 3-4.5 3h-4.9V5.6zm0 11a5 5 0 0 0 8.3 3.5c1.4-1.4 1.8-3.5 1.1-5.3s-2.5-3-4.5-3h-4.9v4.8zm-6.3 3.5c1.9 0 3.5-1.5 3.5-3.5v-3.5H4.8c-1.9 0-3.5 1.5-3.5 3.5s1.6 3.5 3.5 3.5zm4.9-3.5a5 5 0 0 1-8.3 3.5C0 18.7-.4 16.6.3 14.8s2.5-3 4.5-3h4.9v4.8z" fill="currentColor" />
+            </svg>
+          </div>
+      </div>
+      End Projects -->
+
+      <!-- Testimonials -->
+      <div class="mt-10 sm:mt-14">
+        <h2 class="mb-3 font-medium text-gray-800 dark:text-neutral-200">
+          Recomendações
+        </h2>
+
+        <!-- Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-3 border-y border-gray-200 divide-y sm:divide-y-0 sm:divide-x divide-gray-200 dark:border-neutral-700 dark:divide-neutral-700">
+          <div class="sm:-ms-4 py-6 sm:px-4">
+            <!-- Review -->
+            <blockquote>
+              <span class="text-sm text-gray-800 dark:text-neutral-200">Trabalhei com o Albuquerque no meu início de carreira, ele era um colega muito solícito e um ótimo mentor. Conseguia lidar com múltiplas tarefas ao mesmo tempo, ao qual sempre pegava as tarefas de maior complexidade da sprint. Apresentava ótimo conhecimento de arquitetura e algoritmos. Umas das principais qualidades dele era aprender rapidamente um assunto e transmitir esse assunto de forma clara.</span>
+
+              <footer class="mt-3">
+                <div class="flex items-center gap-x-2">
+                  <img class="shrink-0 size-5 rounded-full" src="https://media.licdn.com/dms/image/v2/D4E03AQGNU_kjvPE6cA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1711600526403?e=1739404800&v=beta&t=1SAdhBvgJms5XP5RzbZfBQTQCSMjAwmLR9xId3nEpug" alt="Avatar">
+                  <div class="grow">
+                    <div class="text-xs text-gray-500 dark:text-neutral-500">Carlos Eduardo</div>
+                  </div>
+                </div>
+              </footer>
+            </blockquote>
+            <!-- End Review -->
+          </div>
+
+          <div class="py-6 sm:px-4">
+            <!-- Review -->
+            <blockquote>
+              <span class="text-sm text-gray-800 dark:text-neutral-200">Bom, minhas experiência como N2 foram muito além do passar chamados que demandavam seus conhecimentos. Aprendi muito com ele. Demonstra muita habilidade em diversas ferramentas e linguagens de programação. Além de ser cauteloso em seus processos, para obter bons resultados em suas entregas.</span>
+
+              <footer class="mt-3">
+                <div class="flex items-center gap-x-2">
+                  <img class="shrink-0 size-5 rounded-full" src="https://media.licdn.com/dms/image/v2/D4D03AQHQOR4F40iEgg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1679444225639?e=1740009600&v=beta&t=wdATIYec2tD9G3BicCXAvKRLptgvc6yqqla9HyuBI2o" alt="Avatar">
+                  <div class="grow">
+                    <div class="text-xs text-gray-500 dark:text-neutral-500">Rafael Machado</div>
+                  </div>
+                </div>
+              </footer>
+            </blockquote>
+            <!-- End Review -->
+          </div>
+        </div>
+        <!-- End Grid -->
+      </div>
+      <!-- End Testimonials -->
+
+      <!-- Skills -->
+      <div class="my-10 sm:my-14">
+        <h2 class="mb-5 font-medium text-gray-800 dark:text-neutral-200">
+          Skills
+        </h2>
+
+        <!-- List -->
+        <div class="space-y-3">
+          <dl class="flex flex-col sm:flex-row gap-1">
+            <dt class="min-w-40">
+              <span class="block text-sm text-gray-500 dark:text-neutral-500">Desenvolvimento:</span>
+            </dt>
+            <dd>
+              <ul>
+                <li class="me-1 inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                  <i class="fa-brands fa-php fa-xl mr-2"></i>
+                  <span class="mx-1">PHP</span>
+                </li>
+                <li class="me-1 inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                  <i class="fa-brands fa-laravel fa-xl mr-2"></i>
+                  <span class="mx-1">Laravel</span>
+                </li>
+                <li class="me-1 inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                  <i class="fa-brands fa-golang fa-xl mr-2"></i>
+                  <span class="mx-1">Golang</span>
+                </li>
+                <li class="me-1 inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                  <svg class="shrink-0 size-4 me-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 5C8.8 5 6.8 6.6 6 9.8C7.2 8.2 8.6 7.6 10.2 8C11.1129 8.228 11.7653 8.89067 12.4876 9.62356C13.664 10.8178 15.0258 12.2 18 12.2C21.2 12.2 23.2 10.6 24 7.4C22.8 9 21.4 9.6 19.8 9.2C18.8871 8.972 18.2347 8.30933 17.5124 7.57644C16.336 6.38222 14.9742 5 12 5ZM6 12.2C2.8 12.2 0.8 13.8 0 17C1.2 15.4 2.6 14.8 4.2 15.2C5.11289 15.4284 5.76533 16.0907 6.48756 16.8236C7.664 18.0178 9.02578 19.4 12 19.4C15.2 19.4 17.2 17.8 18 14.6C16.8 16.2 15.4 16.8 13.8 16.4C12.8871 16.172 12.2347 15.5093 11.5124 14.7764C10.336 13.5822 8.97422 12.2 6 12.2Z" fill="currentColor" />
+                  </svg>
+                  Tailwind CSS
+                </li>
+                <li class="me-1 pl-2 inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                  <i class="fa-brands fa-aws fa-xl"></i>
+                  <span class="mx-1">AWS</span>
+                </li>
+              </ul>
+            </dd>
+          </dl>
+
+          <dl class="flex flex-col sm:flex-row gap-1">
+            <dt class="min-w-40">
+              <span class="block text-sm text-gray-500 dark:text-neutral-500">Colaboração:</span>
+            </dt>
+            <dd>
+              <ul>
+                <li class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                  <svg class="shrink-0 size-4 me-1" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.7438 0.940745C6.84695 1.30308 2.6841 1.63631 2.48837 1.67533C1.9396 1.77319 1.44038 2.14544 1.20563 2.63537L1 3.06646L1.01982 13.3407L1.04893 23.615L1.36234 24.2517C1.53886 24.6042 2.73365 26.2499 4.0362 27.9439C6.61221 31.2836 6.79802 31.47 7.77726 31.5679C8.06156 31.597 10.1966 31.4991 12.5081 31.3622C14.8295 31.2154 18.5508 30.99 20.7842 30.863C30.3233 30.2839 29.8334 30.3328 30.3815 29.8627C31.0672 29.2947 31.0183 30.2251 31.0474 17.7377C31.0672 7.15003 31.0573 6.45509 30.9006 6.13177C30.7148 5.76943 30.3815 5.51487 26.0329 2.45885C23.1243 0.421704 22.9186 0.313932 21.6155 0.294111C21.0772 0.274911 16.6307 0.568497 11.7438 0.940745ZM22.752 2.28232C23.1633 2.46814 26.1704 4.56412 26.6108 4.9661C26.7284 5.08378 26.7675 5.18164 26.7086 5.24048C26.5717 5.35817 7.96245 6.465 7.42421 6.38634C7.17956 6.34732 6.81722 6.20052 6.61159 6.06302C5.75932 5.48514 3.64413 3.75149 3.64413 3.62452C3.64413 3.29129 3.57538 3.29129 11.8714 2.69421C13.4582 2.58644 16.0633 2.39071 17.6502 2.26312C21.0871 1.98874 22.1159 1.99865 22.752 2.28232ZM28.6677 7.63996C28.8046 7.77685 28.9223 8.04132 28.9613 8.29589C28.9904 8.53125 29.0102 12.9189 28.9904 18.0313C28.9613 26.8067 28.9514 27.3555 28.7848 27.61C28.6869 27.7667 28.4912 27.9333 28.3438 27.9823C27.9331 28.1489 8.43318 29.2557 8.03183 29.138C7.84601 29.0891 7.59083 28.9324 7.45394 28.7955L7.21858 28.541L7.18947 19.0799C7.16965 12.4395 7.18947 9.5012 7.26813 9.23672C7.32697 9.041 7.47376 8.80564 7.60136 8.72759C7.77788 8.60991 8.93364 8.51205 12.9101 8.2773C15.7016 8.1206 20.0206 7.85613 22.4987 7.70933C28.3933 7.34638 28.3741 7.34638 28.6677 7.63996Z" class="fill-black dark:fill-neutral-200" fill="currentColor"></path>
+                    <path d="M23.4277 10.8818C22.3698 10.9506 21.4296 11.0484 21.3218 11.1073C20.9985 11.2739 20.8028 11.5483 20.7638 11.8617C20.7347 12.185 20.8325 12.224 21.8898 12.3516L22.35 12.4104V16.5925C22.35 19.0799 22.311 20.7256 22.2621 20.6767C22.2131 20.6178 20.8226 18.5027 19.167 15.9756C17.512 13.4392 16.1407 11.3525 16.1209 11.3333C16.1011 11.3135 15.024 11.3724 13.7313 11.4609C12.1445 11.5687 11.273 11.6666 11.0965 11.7644C10.8122 11.9112 10.4988 12.4303 10.4988 12.7734C10.4988 12.979 10.871 13.0868 11.6545 13.0868H12.0658V25.1139L11.4 25.3196C10.8809 25.4763 10.7044 25.5741 10.6165 25.7698C10.4598 26.1031 10.4697 26.4066 10.6264 26.4066C10.6852 26.4066 11.792 26.3378 13.0649 26.2598C15.582 26.113 15.8657 26.0442 16.1302 25.5252C16.2088 25.3685 16.277 25.2019 16.277 25.1529C16.277 25.1139 15.9345 24.9962 15.5226 24.8984C15.1014 24.8005 14.6802 24.7027 14.5923 24.6828C14.4257 24.6339 14.4157 24.3304 14.4157 20.1186V15.6033L17.3931 20.2753C20.5173 25.1721 20.9093 25.7308 21.3893 25.9755C21.987 26.2889 23.5051 26.0733 24.2688 25.5741L24.5042 25.4273L24.524 18.7479L24.5531 12.0586L25.0722 11.9608C25.6891 11.8431 25.9734 11.5594 25.9734 11.0695C25.9734 10.7561 25.9536 10.7362 25.66 10.7462C25.4847 10.7542 24.4757 10.813 23.4277 10.8818Z" class="fill-black dark:fill-neutral-200" fill="currentColor"></path>
+                  </svg>
+                  Notion
+                </li>
+                <li class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                  <svg class="shrink-0 size-4 me-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.62424 14.7793C7.64424 14.7993 7.64424 14.8393 7.62424 14.8793C7.54424 15.0193 7.38424 15.0993 7.22424 15.0793C6.92424 15.0393 6.70424 14.7993 6.72424 14.4993C6.72424 14.2993 6.76424 14.1193 6.82424 13.9193C6.92424 13.6793 6.82424 13.4193 6.62424 13.2793C6.50424 13.1993 6.34424 13.1793 6.20424 13.1993C6.06424 13.2193 5.94424 13.3193 5.86425 13.4393C5.80425 13.5393 5.76425 13.6393 5.74425 13.7393C5.74425 13.7593 5.72425 13.7793 5.72425 13.7793C5.68425 13.8993 5.60425 13.9393 5.54425 13.9393C5.52425 13.9393 5.48425 13.9193 5.46425 13.8593C5.40425 13.5193 5.52425 13.1793 5.74425 12.9193C5.94424 12.6993 6.22424 12.5993 6.52424 12.6393C6.82424 12.6793 7.10424 12.8793 7.22424 13.1593C7.36424 13.4993 7.32424 13.8793 7.14424 14.1993C7.12424 14.2193 7.12424 14.2593 7.10424 14.2793C7.04424 14.3993 7.02424 14.5593 7.10424 14.6793C7.16424 14.7593 7.24424 14.7993 7.34424 14.7993C7.38424 14.7993 7.42424 14.7993 7.46424 14.7793C7.54424 14.7393 7.60424 14.7393 7.62424 14.7793ZM20.8442 15.0993C20.8242 15.7193 20.6842 16.3193 20.4642 16.8993C19.3442 19.5993 16.6642 21.0993 13.4642 20.9993C10.4842 20.9193 7.94424 19.3393 6.84424 16.7593C6.14424 16.7393 5.46425 16.4593 4.96425 15.9993C4.42425 15.5393 4.08425 14.8993 4.00425 14.1993C3.94425 13.7193 4.00425 13.2393 4.18425 12.7793L3.56425 12.2593C0.68425 9.85935 9.62424 -0.100651 12.4642 2.39935C12.4842 2.41935 13.4442 3.35935 13.4442 3.35935C13.4442 3.35935 13.9642 3.13935 13.9842 3.13935C16.4842 2.09935 18.5242 2.59935 18.5242 4.25935C18.5242 5.11935 17.9842 6.11935 17.1042 7.03935C17.4642 7.39935 17.7042 7.83935 17.8242 8.31935C17.9242 8.65935 17.9642 8.99935 17.9842 9.35935C18.0042 9.71935 18.0242 10.5393 18.0242 10.5393C18.0442 10.5393 18.3042 10.6193 18.3842 10.6393C18.9042 10.7593 19.3642 10.9793 19.7642 11.3193C19.9842 11.5193 20.1042 11.7993 20.1642 12.0793C20.2242 12.4593 20.1242 12.8393 19.9042 13.1393C19.9642 13.2793 20.0042 13.3993 20.0642 13.5393C20.1442 13.7793 20.1842 13.9793 20.2042 13.9993C20.4242 14.0393 20.8442 14.3593 20.8442 15.0993ZM8.24424 13.6193C8.04424 12.3593 7.20424 11.9193 6.62424 11.8793C6.48424 11.8793 6.34424 11.8793 6.18424 11.9193C5.16425 12.1193 4.56425 12.9993 4.68425 14.1393C4.86425 15.1993 5.72425 15.9993 6.78424 16.0593C6.88424 16.0593 6.98424 16.0593 7.08424 16.0393C8.14424 15.8793 8.40424 14.7393 8.24424 13.6193ZM10.0042 5.61935C10.8842 4.89935 11.8042 4.25935 12.7842 3.69935C12.7842 3.69935 12.0042 2.79935 11.7642 2.71935C10.3242 2.31935 7.20424 4.47935 5.20425 7.33935C4.40425 8.49935 3.24425 10.5393 3.80425 11.5793C4.00425 11.8193 4.22425 12.0193 4.46425 12.2193C4.82425 11.6993 5.38425 11.3393 6.02424 11.2193C6.80424 9.03935 8.18424 7.09935 10.0042 5.61935ZM13.1242 15.5993C13.2042 15.9393 13.4642 16.2193 13.8042 16.2993C13.9842 16.3593 14.1442 16.4193 14.3442 16.4393C16.6242 16.8393 18.7642 15.5193 19.2442 15.1993C19.2842 15.1793 19.3042 15.1993 19.2842 15.2393C19.2642 15.2593 19.2442 15.2793 19.2442 15.2993C18.6642 16.0593 17.0842 16.9393 15.0242 16.9393C14.1242 16.9393 13.2242 16.6193 12.9042 16.1393C12.3842 15.3793 12.8842 14.2793 13.7242 14.3993C13.7242 14.3993 14.0242 14.4393 14.1042 14.4393C15.4242 14.5593 16.7642 14.3593 17.9842 13.8193C19.1442 13.2793 19.5842 12.6793 19.5242 12.1993C19.5042 12.0593 19.4242 11.9193 19.3242 11.7993C19.0042 11.5393 18.6242 11.3593 18.2242 11.2793C18.0442 11.2193 17.9242 11.1993 17.7842 11.1593C17.5442 11.0793 17.4242 11.0193 17.4042 10.5593C17.3842 10.3593 17.3642 9.67935 17.3442 9.37935C17.3242 8.87935 17.2642 8.19935 16.8442 7.91935C16.7442 7.83935 16.6042 7.79935 16.4842 7.79935C16.4042 7.79935 16.3442 7.79935 16.2642 7.81935C16.0442 7.85935 15.8642 7.97935 15.7042 8.13935C15.3042 8.49935 14.7842 8.67935 14.2442 8.63935C13.9442 8.61935 13.6442 8.57935 13.2842 8.55935C13.2242 8.55935 13.1442 8.55935 13.0842 8.53935C12.1242 8.55935 11.3442 9.27935 11.2242 10.2393C11.0242 11.6593 12.0442 12.3793 12.3442 12.8193C12.3842 12.8793 12.4242 12.9393 12.4242 13.0193C12.4242 13.0993 12.3842 13.1793 12.3242 13.2193C11.5042 14.1393 11.2042 15.4193 11.5242 16.6193C11.5642 16.7593 11.6042 16.8993 11.6642 17.0393C12.4042 18.7793 14.7242 19.5993 16.9842 18.8593C17.2842 18.7593 17.5642 18.6393 17.8442 18.4993C18.3442 18.2593 18.7842 17.9193 19.1642 17.5193C19.7442 16.9393 20.1242 16.1793 20.2642 15.3593C20.3242 14.8993 20.2242 14.7393 20.1042 14.6593C20.0042 14.5993 19.9042 14.5793 19.7842 14.5993C19.7242 14.2393 19.6242 13.8993 19.4842 13.5793C18.8442 14.0593 18.1042 14.4393 17.3242 14.6593C16.3842 14.9193 15.4242 15.0193 14.4442 14.9793C13.8242 14.9193 13.4042 14.7393 13.2442 15.2593C14.1842 15.5793 15.1842 15.6793 16.1842 15.5593C16.2042 15.5593 16.2442 15.5793 16.2442 15.5993C16.2442 15.6193 16.2242 15.6393 16.2042 15.6593C16.1242 15.6393 14.9642 16.1793 13.1242 15.5993ZM9.74424 7.37935C10.5042 6.83935 11.3842 6.45935 12.2842 6.25935C13.3242 6.01935 14.3842 6.01935 15.4242 6.25935C15.4642 6.25935 15.4842 6.19935 15.4442 6.17935C14.9042 5.89935 14.3242 5.73935 13.7042 5.71935C13.6842 5.71935 13.6642 5.69935 13.6642 5.67935V5.65935C13.7642 5.53935 13.8642 5.41935 13.9842 5.33935C14.0042 5.31935 14.0042 5.29935 13.9842 5.29935L13.9642 5.27935C13.2242 5.35935 12.5242 5.59935 11.8842 6.01935C11.8642 6.01935 11.8442 6.01935 11.8442 6.01935V5.99935C11.8842 5.81935 11.9642 5.63935 12.0642 5.45935C12.0642 5.43935 12.0642 5.41935 12.0442 5.41935H12.0242C11.1242 5.91935 10.3242 6.57935 9.66424 7.35935C9.64424 7.37935 9.64424 7.39935 9.66424 7.39935C9.70424 7.39935 9.72424 7.39935 9.74424 7.37935ZM15.7442 12.1993C15.8642 12.2793 16.0442 12.2593 16.1442 12.1393C16.2042 12.0193 16.1242 11.8793 15.9642 11.7993C15.8442 11.7193 15.6642 11.7393 15.5642 11.8593C15.5042 11.9593 15.5842 12.1193 15.7442 12.1993ZM16.2442 10.3793C16.2842 10.5793 16.3642 10.7793 16.4842 10.9393C16.6042 10.9193 16.7442 10.9193 16.8642 10.9393C16.9442 10.7193 16.9442 10.4793 16.8842 10.2593C16.7842 9.83935 16.6642 9.59935 16.4242 9.63935C16.1642 9.67935 16.1442 9.97935 16.2442 10.3793ZM16.7842 11.3393C16.6242 11.2993 16.4442 11.3793 16.3842 11.5593C16.3442 11.7193 16.4242 11.8993 16.6042 11.9593C16.7842 12.0193 16.9442 11.9193 17.0042 11.7393C17.0042 11.7193 17.0242 11.6793 17.0242 11.6593C17.0242 11.4993 16.9242 11.3593 16.7842 11.3393Z" fill="currentColor" />
+                    <path d="M12.5642 11.2989C12.5242 11.2989 12.5042 11.2789 12.5042 11.2589C12.4842 11.1789 12.6042 11.0789 12.7042 10.9789C13.0442 10.7189 13.5042 10.6789 13.8842 10.8389C14.0642 10.9189 14.2242 11.0389 14.3242 11.1989C14.3642 11.2589 14.3642 11.3189 14.3442 11.3389C14.3042 11.3789 14.2042 11.3389 14.0242 11.2589C13.8242 11.1589 13.5842 11.0989 13.3642 11.1189C13.1042 11.1589 12.8242 11.2189 12.5642 11.2989ZM14.2842 11.6589C14.1242 11.4989 13.9042 11.4189 13.7042 11.4589C13.5442 11.4789 13.4042 11.5389 13.2842 11.6389C13.2242 11.6789 13.1842 11.7389 13.1842 11.8189C13.1842 11.8389 13.1842 11.8589 13.2042 11.8589C13.2242 11.8589 13.2242 11.8789 13.2442 11.8789C13.3042 11.8789 13.3642 11.8589 13.4042 11.8389C13.6442 11.7589 13.8842 11.7189 14.1242 11.7589C14.2442 11.7789 14.2842 11.7789 14.3242 11.7389C14.3042 11.6989 14.3042 11.6789 14.2842 11.6589Z" fill="currentColor" />
+                  </svg>
+                  Mailchimp
+                </li>
+                <li class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                  <svg class="shrink-0 size-4 me-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.79945 0C7.47279 0.000978593 6.39908 1.07548 6.40006 2.39951C6.39908 3.72355 7.47377 4.79804 8.80043 4.79902H11.2009V2.40049C11.2019 1.07645 10.1272 0.00195719 8.79945 0ZM8.79945 6.4H2.4004C1.07371 6.40098 -0.000977873 7.47548 2.67973e-06 8.79953C-0.00195842 10.1236 1.07273 11.198 2.39942 11.2H8.79945C10.1262 11.199 11.2009 10.1245 11.1999 8.8005C11.2009 7.47547 10.1262 6.40098 8.79945 6.4Z" fill="currentColor" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M24 8.79953C24.001 7.47548 22.9263 6.40098 21.5996 6.4C20.2729 6.40098 19.1982 7.47548 19.1992 8.79953V11.2H21.5996C22.9263 11.199 24.001 10.1246 24 8.79953ZM17.6 8.79953V2.39951C17.6009 1.07645 16.5272 0.00195719 15.2006 0C13.8738 0.000978593 12.7991 1.07548 12.8001 2.39951V8.79953C12.7981 10.1236 13.8728 11.198 15.1996 11.2C16.5262 11.199 17.6009 10.1246 17.6 8.79953Z" fill="currentColor" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1996 24C16.5262 23.999 17.6009 22.9245 17.5999 21.6005C17.6009 20.2765 16.5262 19.2019 15.1996 19.201H12.7992V21.6005C12.7981 22.9235 13.8729 23.9981 15.1996 24ZM15.1996 17.5991H21.5996C22.9263 17.5981 24.001 16.5236 24 15.1995C24.0019 13.8755 22.9273 12.801 21.6006 12.799H15.2006C13.8739 12.8 12.7992 13.8745 12.8002 15.1985C12.7992 16.5235 13.8729 17.5981 15.1996 17.5991Z" fill="currentColor" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.70464e-07 15.1995C-0.000979883 16.5236 1.07371 17.5981 2.40039 17.5991C3.72708 17.5981 4.80176 16.5236 4.80079 15.1995V12.8H2.40039C1.07371 12.801 -0.000979883 13.8755 6.70464e-07 15.1995ZM6.40006 15.1995V21.5995C6.39811 22.9235 7.47279 23.9981 8.79945 24C10.1262 23.999 11.2009 22.9245 11.1999 21.6005V15.2015C11.2018 13.8774 10.1272 12.803 8.80043 12.801C7.47279 12.801 6.39908 13.8755 6.40006 15.1995Z" fill="currentColor" />
+                  </svg>
+                  Slack
+                </li>
+              </ul>
+            </dd>
+          </dl>
+
+          <dl class="flex flex-col sm:flex-row gap-1">
+            <dt class="min-w-40">
+              <span class="block text-sm text-gray-500 dark:text-neutral-500">Expertises:</span>
+            </dt>
+            <dd>
+              <ul>
+                <li class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                  Desenvolvimento back-end
+                </li>
+                <li class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                  Sistemas multi-tenant
+                </li>
+                <li class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                  Microsserviços
+                </li>
+                <li class="me-1 inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                  Sistemas e aplicações financeiras
+                </li>
+              </ul>
+            </dd>
+          </dl>
+
+          <dl class="flex flex-col sm:flex-row gap-1">
+            <dt class="min-w-40">
+              <span class="block text-sm text-gray-500 dark:text-neutral-500">Soft Skills:</span>
+            </dt>
+            <dd>
+              <ul>
+                <li class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                  Comunicação assertiva
+                </li>
+                <li class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                  Resolução de problemas
+                </li>
+                <li class="me-1 inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                  Autogestão
+                </li>
+              </ul>
+            </dd>
+          </dl>
+        </div>
+        <!-- End List -->
+      </div>
+      <!-- End Skills -->
+
+      <!-- Work Experience -->
+      <div class="mt-10 sm:mt-14" id="experience">
+        <h2 class="mb-5 font-medium text-gray-800 dark:text-neutral-200">
+          Experiência
+        </h2>
+
+        <!-- Timeline -->
+        <div>
+          <!-- Item -->
+          <div class="group relative flex gap-x-5">
+            <!-- Icon -->
+            <div class="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+              <div class="relative z-10 size-6 flex justify-center items-center">
+                <img src="https://media.licdn.com/dms/image/v2/D4E0BAQG_EBROVBsjSA/company-logo_200_200/company-logo_200_200/0/1719256224248/idez_digital_logo?e=1741824000&v=beta&t=AUxmfHFiQp4Nf3lHEIurYYY7xqDVmne5xk79GpJaLVw" alt="idez">
+              </div>
+            </div>
+            <!-- End Icon -->
+
+            <!-- Right Content -->
+            <div class="grow pb-8 group-last:pb-0">
+              <h3 class="mb-1 text-xs text-gray-600 dark:text-neutral-400">
+                2023 - Atualmente
+              </h3>
+
+              <p class="font-semibold text-sm text-gray-800 dark:text-neutral-200">
+                Desenvolvedor &amp; Engenheiro de Software
+              </p>
+
+              <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">
+                A iDez Digital é uma startup que atua no conceito de Embedded Finance, permitindo que seus clientes atuem como bancos e ofereçam serviços financeiros.
+              </p>
+
+              <ul class="list-disc ms-6 mt-3 space-y-1.5">
+                <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                  Desenvolvimento de produtos financeiros White Label e API para clientes como Kirvano, Onfly, ClavaForte (Lagoinha Church), entre outros.
+                </li>
+                <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                  Planejamento, desenvolvimento e manutenção de fluxos e funcionalidades bancárias, incluindo PIX, empréstimos, rendimento de CDI, entre outras operações financeiras.
+                </li>
+                <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                  Criação e implementação de um sistema de Web Banking White Label servido em multi-tenants para atender às necessidades de clientes na base.
+                </li>
+                <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                  Responsável por projetar e desenvolver sistemas de autenticação e autorização baseados em SSO (Single  Sign-On) para integração segura e eficiente de sistemas internos distribuídos.
+                </li>
+              </ul>
+            </div>
+            <!-- End Right Content -->
+          </div>
+          <!-- End Item -->
+
+          <!-- Item -->
+          <div class="group relative flex gap-x-5">
+            <!-- Icon -->
+            <div class="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+              <div class="relative z-10 size-6 flex justify-center items-center">
+                <img src="https://media.licdn.com/dms/image/v2/C4D0BAQExuxspin-iRQ/company-logo_200_200/company-logo_200_200/0/1670874381276/movacredito_logo?e=1741824000&v=beta&t=NVpqARXVNYdZM88I5Zb573RlC4N082KMuXwLT1bi1oc" alt="mova">
+              </div>
+            </div>
+            <!-- End Icon -->
+
+            <!-- Right Content -->
+            <div class="grow pb-8 group-last:pb-0">
+              <h3 class="mb-1 text-xs text-gray-600 dark:text-neutral-400">
+                2021 - 2023
+              </h3>
+
+              <p class="font-semibold text-sm text-gray-800 dark:text-neutral-200">
+                Engenheiro de Software
+              </p>
+
+              <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">
+                Mova é uma fintech que atua oferecendo serviços de crédito bancário para seus clientes.
+              </p>
+
+
+              <ul class="list-disc ms-6 mt-3 space-y-1.5">
+                <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                  Desenvolvimento de produtos de crédito White Label e API para players como iFood, Natura, Quinto Andar e outros.
+                </li>
+                <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                  Responsável por arquitetar e desenvolver funcionalidades projetadas para atender a bases externas de clientes com milhares de usuários.
+                </li>
+                <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                  Responsável pelo desenvolvimento de projetos críticos para o sistema, como ferramentas internas de
+assinatura e auditoria de contratos.
+                </li>
+                <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                  Atuação na liderança de equipes internas, coordenando atividades e garantindo alinhamento com os objetivos da empresa.
+                </li>
+                <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                  Atuação na liderança de equipes internas, coordenando atividades e garantindo alinhamento com os objetivos da empresa.
+                </li>
+                <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                  Atuação no setor de suporte e sustentação no N3, resolvendo incidentes críticos e atuando diretamente na linha de frente com clientes.
+                </li>
+                <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                  Responsável pela manutenção e operação de relatórios automatizados para garantir a conformidade com as exigências do BACEN.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- End item -->
+
+         <!-- Item -->
+          <div class="group relative flex gap-x-5">
+            <!-- Icon -->
+            <div class="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+              <div class="relative z-10 size-6 flex justify-center items-center">
+                <img src="https://incit.com.br/wp-content/uploads/2022/08/9-walls-15.png" alt="intec">
+              </div>
+            </div>
+            <!-- End Icon -->
+
+            <!-- Right Content -->
+            <div class="grow pb-8 group-last:pb-0">
+              <h3 class="mb-1 text-xs text-gray-600 dark:text-neutral-400">
+                2021 - 2021
+              </h3>
+
+              <p class="font-semibold text-sm text-gray-800 dark:text-neutral-200">
+                Engenheiro de Software
+              </p>
+
+              <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">
+                Incluir Tecnologia é uma empresa de desenvolvimento de software que na época prestava serviços à Mova.
+              </p>
+
+              <ul class="list-disc ms-6 mt-3 space-y-1.5">
+                <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                  Desenvolvimento de funcionalidades em conjunto com os demais membros da squad.
+                </li>
+                <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                  Suporte na migração e refatoração de antigos monolitos para arquitetura de microsserviços.
+                </li>
+                <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                  Atuações em conjunto com a equipe de DevOps na manutenção de imagens usadas nos ambientes GKE (Google Kubernetes Engine).
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- End item -->
+
+
+         <!-- Item -->
+          <div class="group relative flex gap-x-5">
+            <!-- Icon -->
+            <div class="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+              <div class="relative z-10 size-6 flex justify-center items-center">
+                <svg class="shrink-0 size-6 text-gray-800 dark:text-neutral-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 12h.01" />
+                  <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+                  <path d="M22 13a18.15 18.15 0 0 1-20 0" />
+                  <rect width="20" height="14" x="2" y="6" rx="2" />
+                </svg>
+              </div>
+            </div>
+            <!-- End Icon -->
+
+            <!-- Right Content -->
+            <div class="grow pb-8 group-last:pb-0">
+              <h3 class="mb-1 text-xs text-gray-600 dark:text-neutral-400">
+                2020 - Atualmente
+              </h3>
+
+              <p class="font-semibold text-sm text-gray-800 dark:text-neutral-200">
+                Freelancer em desenvolvimento de software
+              </p>
+
+              <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">
+                No tempo disponível realizo trabalhos temporários como freelancer, realizei alguns projetos sendo alguns deles:
+              </p>
+
+              <ul class="list-disc ms-6 mt-3 space-y-1.5">
+                <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                  Sistema de controle de estoque e fluxo de caixa para farmácia local.
+                </li>
+                <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                  Manutenção em plataforma de geração de códigos promocionais para loja digital.
+                </li>
+                <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                  Desenvolvimento de sites institucionais e de prospecção de leads.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- End item -->
+
+        </div>
+        <!-- End Timeline -->
+      </div>
+      <!-- End Work Experience -->
+
+      <!-- Education -->
+      <div class="mt-10 sm:mt-14">
+        <h2 class="mb-3 font-medium text-gray-800 dark:text-neutral-200">
+          Educação
+        </h2>
+
+        <!-- Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div class="p-4 border border-gray-200 rounded-lg dark:border-neutral-700">
+            <div class="relative z-10 size-10 flex justify-center items-center mb-3">
+              <img src="https://d2ojpxxtu63wzl.cloudfront.net/static/0ea635c6fe20bc0757a67fc921496a4d_5dd386cb428b892d12cfd7c7044bf3460eb155b4f39af60ddc4486085c3c1cfa">
+            </div>
+
+            <h3 class="mb-1 text-xs text-gray-600 dark:text-neutral-400">
+              2024 - Atualmente
+            </h3>
+
+            <p class="font-semibold text-sm text-gray-800 dark:text-neutral-200">
+                Pós Graduação em Arquitetura de Software
+            </p>
+
+            <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">
+              FIAP
+            </p>
+          </div>
+
+          <div class="p-4 border border-gray-200 rounded-lg dark:border-neutral-700">
+            <div class="relative z-10 size-10 flex justify-center items-center mb-3">
+              <img src="https://logospng.org/download/cruzeiro-do-sul/logo-cruzeiro-do-sul-estrela-1024.png">
+            </div>
+
+            <h3 class="mb-1 text-xs text-gray-600 dark:text-neutral-400">
+              2019 - 2021
+            </h3>
+
+            <p class="font-semibold text-sm text-gray-800 dark:text-neutral-200">
+                Tecnólogo em Análise e Desenvolvimento de Sistemas
+            </p>
+
+            <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">
+                Universidade Cruzeiro do Sul
+            </p>
+          </div>
+
+        </div>
+        <!-- End Grid -->
+      </div>
+      <!-- End Education -->
+
+      <!-- Articles -->
+      <div class="my-10 sm:my-14" id="articles">
+        <h2 class="mb-5 font-medium text-gray-800 dark:text-neutral-200">
+          Artigos
+        </h2>
+
+        <!-- List -->
+        <ul class="space-y-10">
+          <li>
+            <p class="mb-2 text-sm text-gray-500 dark:text-neutral-500">
+              2023
+            </p>
+            <h5 class="font-medium text-sm text-gray-800 dark:text-neutral-200">
+                Goroutines não são threads!
+            </h5>
+            <p class="mt-1 text-sm text-gray-500 dark:text-neutral-500">
+                Entendo que muitas pessoas (assim como eu), ao conhecer o conceito de Goroutines pensou “pera, isso aí são threads” [...]
+            </p>
+            <p class="mt-1">
+              <a class="text-sm text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="https://albuquerque53.medium.com/goroutines-n%C3%A3o-s%C3%A3o-threads-d6bf207d32b4">
+                Continuar lendo
+              </a>
+            </p>
+          </li>
+
+          <li>
+            <p class="mb-2 text-sm text-gray-500 dark:text-neutral-500">
+              2023
+            </p>
+            <h5 class="font-medium text-sm text-gray-800 dark:text-neutral-200">
+              Escrevendo testes de integração em Golang
+            </h5>
+            <p class="mt-1 text-sm text-gray-500 dark:text-neutral-500">
+              Testes de integração são testes que têm como objetivo assegurar o funcionamento em conjunto dos componentes [...]
+            </p>
+            <p class="mt-1">
+              <a class="text-sm text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="https://albuquerque53.medium.com/escrevendo-testes-de-integra%C3%A7%C3%A3o-em-golang-5d641008037">
+                Continuar lendo
+              </a>
+            </p>
+          </li>
+
+          <li>
+            <p class="mb-2 text-sm text-gray-500 dark:text-neutral-500">
+              2021
+            </p>
+            <h5 class="font-medium text-sm text-gray-800 dark:text-neutral-200">
+              Será que resolvemos problemas da maneira certa?
+            </h5>
+            <p class="mt-1 text-sm text-gray-500 dark:text-neutral-500">
+              Hoje em dia é normal a ideia do programador resolver problemas, mas como que nós fazemos isso?
+            </p>
+            <p class="mt-1">
+              <a class="text-sm text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="https://albuquerque53.medium.com/ser%C3%A1-que-resolvemos-problemas-da-maneira-certa-b7f4ae1b73ea">
+                Continuar lendo
+              </a>
+            </p>
+          </li>
+
+        </ul>
+        <!-- End List -->
+      </div>
+      <!-- End Articles -->
+
+
+    </div>
+  </main>
+  <!-- ========== END MAIN CONTENT ========== -->
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="w-full max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="py-6 border-t border-gray-200 dark:border-neutral-700">
+      <div class="flex flex-wrap justify-between items-center gap-2">
+        <div>
+          <p class="text-xs text-gray-600 dark:text-neutral-400">
+            © 2025 - made with <3 by albuca.
+          </p>
+        </div>
+        <!-- End Col -->
+
+        <!-- List -->
+        <ul class="flex flex-wrap items-center">
+
+          <li class="inline-block pe-4 text-xs">
+            <a class="text-xs text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="https://github.com/albuquerque53">
+              Github
+            </a>
+          </li>
+          
+          <li class="inline-block relative pe-4 text-xs last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-1.5 before:-translate-y-1/2 before:size-[3px] before:rounded-full before:bg-gray-400 dark:text-neutral-500 dark:before:bg-neutral-600">
+            <a class="text-xs text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="https://linkedin.com/in/albuquerque53">
+              LinkedIn
+            </a>
+          </li>
+
+          <li class="inline-block relative pe-4 text-xs last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-1.5 before:-translate-y-1/2 before:size-[3px] before:rounded-full before:bg-gray-400 dark:text-neutral-500 dark:before:bg-neutral-600">
+            <a class="text-xs text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="https://albuquerque53.medium.com">
+              Medium
+            </a>
+          </li>
+          
+          <li class="inline-block">
+            <!-- Dark Mode -->
+            <button type="button" class="hs-dark-mode hs-dark-mode-active:hidden relative flex justify-center items-center size-7 border border-gray-200 text-gray-500 rounded-full hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" data-hs-theme-click-value="dark">
+              <span class="sr-only">Dark</span>
+              <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+              </svg>
+            </button>
+            <button type="button" class="hs-dark-mode hs-dark-mode-active:flex hidden relative flex justify-center items-center size-7 border border-gray-200 text-gray-500 rounded-full hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" data-hs-theme-click-value="light">
+              <span class="sr-only">Light</span>
+              <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2"></path>
+                <path d="M12 20v2"></path>
+                <path d="m4.93 4.93 1.41 1.41"></path>
+                <path d="m17.66 17.66 1.41 1.41"></path>
+                <path d="M2 12h2"></path>
+                <path d="M20 12h2"></path>
+                <path d="m6.34 17.66-1.41 1.41"></path>
+                <path d="m19.07 4.93-1.41 1.41"></path>
+              </svg>
+            </button>
+            <!-- End Dark Mode -->
+          </li>
+        </ul>
+        <!-- End List -->
+      </div>
+    </div>
+  </footer>
+  <!-- ========== END FOOTER ========== -->
+
+  <!-- JS Implementing Plugins -->
+
+  <!-- JS PLUGINS -->
+  <!-- Required plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/preline/dist/preline.min.js"></script>
+</body>
+</html>
