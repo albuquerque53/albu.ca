@@ -67,7 +67,7 @@
       <div id="hs-navbar-header-floating" class="hidden hs-collapse overflow-hidden transition-all duration-300 basis-full grow md:block" aria-labelledby="hs-navbar-header-floating-collapse">
         <div class="flex flex-col md:flex-row md:items-center md:justify-end gap-2 md:gap-3 mt-3 md:mt-0 py-2 md:py-0 md:ps-7">
           <a class="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-gray-800 font-medium text-gray-800 focus:outline-none dark:border-neutral-200 dark:text-neutral-200" href="#" aria-current="page">Home</a>
-          <!-- <a class="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200" href="#projects">Projetos</a> -->
+          <a class="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200" href="#projects">Projetos</a>
           <a class="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200" href="#experience">Experiência</a>
           <a class="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200" href="#articles">Artigos</a>
         </div>
@@ -179,51 +179,178 @@
       </div>
       End Projects -->
 
-      <!-- Testimonials -->
-      <div class="mt-10 sm:mt-14">
-        <h2 class="mb-3 font-medium text-gray-800 dark:text-neutral-200">
-          Recomendações
-        </h2>
-
-        <!-- Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-3 border-y border-gray-200 divide-y sm:divide-y-0 sm:divide-x divide-gray-200 dark:border-neutral-700 dark:divide-neutral-700">
-          <div class="sm:-ms-4 py-6 sm:px-4">
-            <!-- Review -->
-            <blockquote>
-              <span class="text-sm text-gray-800 dark:text-neutral-200">Trabalhei com o Albuquerque no meu início de carreira, ele era um colega muito solícito e um ótimo mentor. Conseguia lidar com múltiplas tarefas ao mesmo tempo, ao qual sempre pegava as tarefas de maior complexidade da sprint. Apresentava ótimo conhecimento de arquitetura e algoritmos. Umas das principais qualidades dele era aprender rapidamente um assunto e transmitir esse assunto de forma clara.</span>
-
-              <footer class="mt-3">
-                <div class="flex items-center gap-x-2">
-                  <img class="shrink-0 size-5 rounded-full" src="assets/1711600526403.jpeg" alt="Avatar">
-                  <div class="grow">
-                    <div class="text-xs text-gray-500 dark:text-neutral-500">Carlos Eduardo</div>
-                  </div>
-                </div>
-              </footer>
-            </blockquote>
-            <!-- End Review -->
-          </div>
-
-          <div class="py-6 sm:px-4">
-            <!-- Review -->
-            <blockquote>
-              <span class="text-sm text-gray-800 dark:text-neutral-200">Bom, minhas experiência como N2 foram muito além do passar chamados que demandavam seus conhecimentos. Aprendi muito com o Albuca. Demonstra muita habilidade em diversas ferramentas e linguagens de programação. Além de ser cauteloso em seus processos, para obter bons resultados em suas entregas.</span>
-
-              <footer class="mt-3">
-                <div class="flex items-center gap-x-2">
-                  <img class="shrink-0 size-5 rounded-full" src="assets/1750686258964.jpeg" alt="Avatar">
-                  <div class="grow">
-                    <div class="text-xs text-gray-500 dark:text-neutral-500">Rafael Machado</div>
-                  </div>
-                </div>
-              </footer>
-            </blockquote>
-            <!-- End Review -->
-          </div>
+      <!-- Projects -->
+      <div class="mt-10 sm:mt-14 scroll-mt-24" id="projects" style="scroll-margin-top: 6rem;">
+        <div class="mb-5">
+          <h2 class="font-medium text-gray-800 dark:text-neutral-200">
+            Projetos
+          </h2>
+          <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400">
+            Seleção de produtos e funcionalidades em que atuei nos últimos anos. As imagens são representações visuais, preservando a confidencialidade dos sistemas reais.
+          </p>
         </div>
-        <!-- End Grid -->
+
+        <div class="relative" data-project-carousel>
+          <div class="mb-4 flex items-center justify-between gap-3">
+            <button type="button" class="project-carousel-prev flex size-9 shrink-0 items-center justify-center rounded-full border border-gray-200 text-gray-500 hover:bg-gray-100 hover:text-gray-800 focus:outline-none focus:bg-gray-100 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-neutral-200" aria-label="Projeto anterior">
+              <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m15 18-6-6 6-6" />
+              </svg>
+            </button>
+
+            <div class="flex grow items-center justify-center gap-2" data-project-dots aria-label="Projetos"></div>
+
+            <div class="flex items-center gap-3">
+              <span class="min-w-10 text-center text-xs text-gray-500 dark:text-neutral-500" data-project-count>1 / 5</span>
+              <button type="button" class="project-carousel-next flex size-9 shrink-0 items-center justify-center rounded-full border border-gray-200 text-gray-500 hover:bg-gray-100 hover:text-gray-800 focus:outline-none focus:bg-gray-100 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-neutral-200" aria-label="Próximo projeto">
+                <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="overflow-hidden rounded-lg">
+            <div class="flex transition-transform duration-300 ease-out" data-project-track>
+          <article class="project-slide min-w-full overflow-hidden border border-gray-200 rounded-lg dark:border-neutral-700">
+            <div class="bg-gray-50 dark:bg-neutral-800">
+              <img class="w-full h-52 sm:h-72 object-cover object-top" src="assets/transf-lote.png" alt="Tela da funcionalidade de transferências em lote">
+            </div>
+
+            <div class="p-4">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="inline-flex items-center rounded-full bg-gray-100 px-2 py-1 text-[11px] font-medium text-gray-600 dark:bg-neutral-800 dark:text-neutral-400">Web Banking PJ</span>
+                <span class="inline-flex items-center rounded-full bg-gray-100 px-2 py-1 text-[11px] font-medium text-gray-600 dark:bg-neutral-800 dark:text-neutral-400">PIX e TED</span>
+                <span class="inline-flex items-center rounded-full bg-gray-100 px-2 py-1 text-[11px] font-medium text-gray-600 dark:bg-neutral-800 dark:text-neutral-400">Processamento em lote</span>
+                <span class="inline-flex items-center rounded-full border border-gray-200 px-2 py-1 text-[11px] font-medium text-gray-500 dark:border-neutral-700 dark:text-neutral-500">Imagem ilustrativa</span>
+              </div>
+
+              <h3 class="mt-3 font-semibold text-sm text-gray-800 dark:text-neutral-200">
+                Transferências em lote
+              </h3>
+              <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400">
+                Funcionalidade de Web Banking PJ para pagamentos em massa via PIX ou TED. A partir de um CSV configurável, a plataforma identifica destinatários, valida os dados e executa milhares de transações com foco em resiliência, rastreabilidade e flexibilidade para diferentes formatos de arquivo.
+              </p>
+
+              <div class="mt-3 flex flex-wrap gap-3">
+                <a class="text-sm text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="https://ajuda.idez.com.br/pt-BR/articles/9852859-transferencia-em-lote" target="_blank" rel="noopener noreferrer">
+                  Visão geral
+                </a>
+                <a class="text-sm text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="https://ajuda.idez.com.br/pt-BR/articles/9842385-como-fazer-uma-transferencia-em-lote" target="_blank" rel="noopener noreferrer">
+                  Como usar
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-slide min-w-full overflow-hidden border border-gray-200 rounded-lg dark:border-neutral-700">
+            <div class="bg-gray-50 dark:bg-neutral-800">
+              <img class="w-full h-52 sm:h-72 object-cover object-top" src="assets/plataforma-assinaturas.png" alt="Tela da plataforma de assinatura e auditoria de contratos">
+            </div>
+
+            <div class="p-4">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="inline-flex items-center rounded-full bg-gray-100 px-2 py-1 text-[11px] font-medium text-gray-600 dark:bg-neutral-800 dark:text-neutral-400">Contratos digitais</span>
+                <span class="inline-flex items-center rounded-full bg-gray-100 px-2 py-1 text-[11px] font-medium text-gray-600 dark:bg-neutral-800 dark:text-neutral-400">Auditoria</span>
+                <span class="inline-flex items-center rounded-full bg-gray-100 px-2 py-1 text-[11px] font-medium text-gray-600 dark:bg-neutral-800 dark:text-neutral-400">Crédito</span>
+                <span class="inline-flex items-center rounded-full border border-gray-200 px-2 py-1 text-[11px] font-medium text-gray-500 dark:border-neutral-700 dark:text-neutral-500">Imagem ilustrativa</span>
+              </div>
+
+              <h3 class="mt-3 font-semibold text-sm text-gray-800 dark:text-neutral-200">
+                Plataforma de assinatura e auditoria de contratos
+              </h3>
+              <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400">
+                Plataforma para assinatura online de contratos de empréstimo, com experiência guiada para o assinante e trilha auditável para operações internas. Foi usada em uma das maiores financeiras do Brasil, em um contexto com mais de 1,5 milhão de empréstimos intermediados.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-slide min-w-full overflow-hidden border border-gray-200 rounded-lg dark:border-neutral-700">
+            <div class="bg-gray-50 dark:bg-neutral-800">
+              <img class="w-full h-52 sm:h-72 object-cover object-top" src="assets/processamento-cotacao-lote.png" alt="Tela do sistema de processamento de cotacoes em lote">
+            </div>
+
+            <div class="p-4">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="inline-flex items-center rounded-full bg-gray-100 px-2 py-1 text-[11px] font-medium text-gray-600 dark:bg-neutral-800 dark:text-neutral-400">Backoffice</span>
+                <span class="inline-flex items-center rounded-full bg-gray-100 px-2 py-1 text-[11px] font-medium text-gray-600 dark:bg-neutral-800 dark:text-neutral-400">Análise de crédito</span>
+                <span class="inline-flex items-center rounded-full bg-gray-100 px-2 py-1 text-[11px] font-medium text-gray-600 dark:bg-neutral-800 dark:text-neutral-400">Planilhas</span>
+                <span class="inline-flex items-center rounded-full border border-gray-200 px-2 py-1 text-[11px] font-medium text-gray-500 dark:border-neutral-700 dark:text-neutral-500">Imagem ilustrativa</span>
+              </div>
+
+              <h3 class="mt-3 font-semibold text-sm text-gray-800 dark:text-neutral-200">
+                Processamento de cotações em lote
+              </h3>
+              <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400">
+                Painel administrativo para envio de planilhas com beneficiários que precisavam de cotação ou simulação de crédito. O sistema processava milhares de registros simultaneamente, acompanhando status, falhas e resultados para operadores de uma grande empresa do mercado brasileiro de crédito.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-slide min-w-full overflow-hidden border border-gray-200 rounded-lg dark:border-neutral-700">
+            <div class="bg-gray-50 dark:bg-neutral-800">
+              <img class="w-full h-80 sm:h-96 object-cover object-top" src="assets/plataforma-boletos.png" alt="Tela mobile da plataforma de gestao de boletos">
+            </div>
+
+            <div class="p-4">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="inline-flex items-center rounded-full bg-gray-100 px-2 py-1 text-[11px] font-medium text-gray-600 dark:bg-neutral-800 dark:text-neutral-400">App financeiro</span>
+                <span class="inline-flex items-center rounded-full bg-gray-100 px-2 py-1 text-[11px] font-medium text-gray-600 dark:bg-neutral-800 dark:text-neutral-400">Boletos</span>
+                <span class="inline-flex items-center rounded-full bg-gray-100 px-2 py-1 text-[11px] font-medium text-gray-600 dark:bg-neutral-800 dark:text-neutral-400">PF e PJ</span>
+                <span class="inline-flex items-center rounded-full border border-gray-200 px-2 py-1 text-[11px] font-medium text-gray-500 dark:border-neutral-700 dark:text-neutral-500">Imagem ilustrativa</span>
+              </div>
+
+              <h3 class="mt-3 font-semibold text-sm text-gray-800 dark:text-neutral-200">
+                Plataforma de boletos
+              </h3>
+              <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400">
+                Plataforma para emissão, acompanhamento e gestão de boletos em canais digitais. Atende casos de cobrança para clientes PJ e também fluxos de fatura para clientes PF, dentro de um banco com mais de 41,3 milhões de usuários ativos.
+              </p>
+
+              <div class="mt-3">
+                <a class="text-sm text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="https://ajudaempresas.picpay.com/hc/pt-br/articles/33959885565723-Como-emitir-um-boleto" target="_blank" rel="noopener noreferrer">
+                  Como emitir um boleto
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-slide min-w-full overflow-hidden border border-gray-200 rounded-lg dark:border-neutral-700">
+            <div class="bg-gray-50 dark:bg-neutral-800">
+              <img class="w-full h-80 sm:h-96 object-cover object-top" src="assets/emissao-cobrancas-recorrentes.png" alt="Tela mobile de emissao de cobrancas recorrentes">
+            </div>
+
+            <div class="p-4">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="inline-flex items-center rounded-full bg-gray-100 px-2 py-1 text-[11px] font-medium text-gray-600 dark:bg-neutral-800 dark:text-neutral-400">PicPay Empresas</span>
+                <span class="inline-flex items-center rounded-full bg-gray-100 px-2 py-1 text-[11px] font-medium text-gray-600 dark:bg-neutral-800 dark:text-neutral-400">Cobrança recorrente</span>
+                <span class="inline-flex items-center rounded-full bg-gray-100 px-2 py-1 text-[11px] font-medium text-gray-600 dark:bg-neutral-800 dark:text-neutral-400">Automação</span>
+                <span class="inline-flex items-center rounded-full border border-gray-200 px-2 py-1 text-[11px] font-medium text-gray-500 dark:border-neutral-700 dark:text-neutral-500">Imagem ilustrativa</span>
+              </div>
+
+              <h3 class="mt-3 font-semibold text-sm text-gray-800 dark:text-neutral-200">
+                Emissão de cobranças recorrentes
+              </h3>
+              <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400">
+                Funcionalidade no app PJ para configurar assinaturas e cobranças recorrentes. Depois da configuração, o boleto é gerado automaticamente na data definida, publicado no mercado e disponibilizado para gestão e envio ao pagador.
+              </p>
+
+              <div class="mt-3 flex flex-wrap gap-3">
+                <a class="text-sm text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="https://ajudaempresas.picpay.com/hc/pt-br/articles/27806839124251-O-que-%C3%A9-pagamento-recorrente" target="_blank" rel="noopener noreferrer">
+                  O que é pagamento recorrente
+                </a>
+                <a class="text-sm text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="https://ajudaempresas.picpay.com/hc/pt-br/articles/40889531182747-Como-eu-gero-um-boleto-recorrente-assinatura-no-PicPay-Empresas" target="_blank" rel="noopener noreferrer">
+                  Como gerar assinatura
+                </a>
+              </div>
+            </div>
+          </article>
+            </div>
+          </div>
+
+        </div>
       </div>
-      <!-- End Testimonials -->
+      <!-- End Projects -->
 
       <!-- Skills -->
       <div class="my-10 sm:my-14">
@@ -344,7 +471,7 @@
       <!-- End Skills -->
 
       <!-- Work Experience -->
-      <div class="mt-10 sm:mt-14" id="experience">
+      <div class="mt-10 sm:mt-14 scroll-mt-24" id="experience" style="scroll-margin-top: 6rem;">
         <h2 class="mb-5 font-medium text-gray-800 dark:text-neutral-200">
           Experiência
         </h2>
@@ -578,57 +705,8 @@ assinatura e auditoria de contratos.
       </div>
       <!-- End Work Experience -->
 
-      <!-- Education -->
-      <div class="mt-10 sm:mt-14">
-        <h2 class="mb-3 font-medium text-gray-800 dark:text-neutral-200">
-          Educação
-        </h2>
-
-        <!-- Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div class="p-4 border border-gray-200 rounded-lg dark:border-neutral-700">
-            <div class="relative z-10 size-10 flex justify-center items-center mb-3">
-              <img src="https://d2ojpxxtu63wzl.cloudfront.net/static/0ea635c6fe20bc0757a67fc921496a4d_5dd386cb428b892d12cfd7c7044bf3460eb155b4f39af60ddc4486085c3c1cfa">
-            </div>
-
-            <h3 class="mb-1 text-xs text-gray-600 dark:text-neutral-400">
-              2024 - Atualmente
-            </h3>
-
-            <p class="font-semibold text-sm text-gray-800 dark:text-neutral-200">
-                Pós Graduação em Arquitetura de Software
-            </p>
-
-            <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">
-              FIAP
-            </p>
-          </div>
-
-          <div class="p-4 border border-gray-200 rounded-lg dark:border-neutral-700">
-            <div class="relative z-10 size-10 flex justify-center items-center mb-3">
-              <img src="https://logospng.org/download/cruzeiro-do-sul/logo-cruzeiro-do-sul-estrela-1024.png">
-            </div>
-
-            <h3 class="mb-1 text-xs text-gray-600 dark:text-neutral-400">
-              2019 - 2021
-            </h3>
-
-            <p class="font-semibold text-sm text-gray-800 dark:text-neutral-200">
-                Tecnólogo em Análise e Desenvolvimento de Sistemas
-            </p>
-
-            <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">
-                Universidade Cruzeiro do Sul
-            </p>
-          </div>
-
-        </div>
-        <!-- End Grid -->
-      </div>
-      <!-- End Education -->
-
       <!-- Articles -->
-      <div class="my-10 sm:my-14" id="articles">
+      <div class="my-10 sm:my-14" id="articles" style="scroll-margin-top: 6rem;">
         <h2 class="mb-5 font-medium text-gray-800 dark:text-neutral-200">
           Artigos
         </h2>
@@ -691,7 +769,100 @@ assinatura e auditoria de contratos.
       </div>
       <!-- End Articles -->
 
+      <!-- Testimonials -->
+      <div class="mt-10 sm:mt-14">
+        <h2 class="mb-3 font-medium text-gray-800 dark:text-neutral-200">
+          Recomendações
+        </h2>
 
+        <!-- Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-3 border-y border-gray-200 divide-y sm:divide-y-0 sm:divide-x divide-gray-200 dark:border-neutral-700 dark:divide-neutral-700">
+          <div class="sm:-ms-4 py-6 sm:px-4">
+            <!-- Review -->
+            <blockquote>
+              <span class="text-sm text-gray-800 dark:text-neutral-200">Trabalhei com o Albuquerque no meu início de carreira, ele era um colega muito solícito e um ótimo mentor. Conseguia lidar com múltiplas tarefas ao mesmo tempo, ao qual sempre pegava as tarefas de maior complexidade da sprint. Apresentava ótimo conhecimento de arquitetura e algoritmos. Umas das principais qualidades dele era aprender rapidamente um assunto e transmitir esse assunto de forma clara.</span>
+
+              <footer class="mt-3">
+                <div class="flex items-center gap-x-2">
+                  <img class="shrink-0 size-5 rounded-full" src="assets/1711600526403.jpeg" alt="Avatar">
+                  <div class="grow">
+                    <div class="text-xs text-gray-500 dark:text-neutral-500">Carlos Eduardo</div>
+                  </div>
+                </div>
+              </footer>
+            </blockquote>
+            <!-- End Review -->
+          </div>
+
+          <div class="py-6 sm:px-4">
+            <!-- Review -->
+            <blockquote>
+              <span class="text-sm text-gray-800 dark:text-neutral-200">Bom, minhas experiência como N2 foram muito além do passar chamados que demandavam seus conhecimentos. Aprendi muito com o Albuca. Demonstra muita habilidade em diversas ferramentas e linguagens de programação. Além de ser cauteloso em seus processos, para obter bons resultados em suas entregas.</span>
+
+              <footer class="mt-3">
+                <div class="flex items-center gap-x-2">
+                  <img class="shrink-0 size-5 rounded-full" src="assets/1750686258964.jpeg" alt="Avatar">
+                  <div class="grow">
+                    <div class="text-xs text-gray-500 dark:text-neutral-500">Rafael Machado</div>
+                  </div>
+                </div>
+              </footer>
+            </blockquote>
+            <!-- End Review -->
+          </div>
+        </div>
+        <!-- End Grid -->
+      </div>
+      <!-- End Testimonials -->
+
+      <!-- Education -->
+      <div class="mt-10 sm:mt-14">
+        <h2 class="mb-3 font-medium text-gray-800 dark:text-neutral-200">
+          Educação
+        </h2>
+
+        <!-- Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div class="p-4 border border-gray-200 rounded-lg dark:border-neutral-700">
+            <div class="relative z-10 size-10 flex justify-center items-center mb-3">
+              <img src="https://d2ojpxxtu63wzl.cloudfront.net/static/0ea635c6fe20bc0757a67fc921496a4d_5dd386cb428b892d12cfd7c7044bf3460eb155b4f39af60ddc4486085c3c1cfa">
+            </div>
+
+            <h3 class="mb-1 text-xs text-gray-600 dark:text-neutral-400">
+              2024 - Atualmente
+            </h3>
+
+            <p class="font-semibold text-sm text-gray-800 dark:text-neutral-200">
+                Pós Graduação em Arquitetura de Software
+            </p>
+
+            <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">
+              FIAP
+            </p>
+          </div>
+
+          <div class="p-4 border border-gray-200 rounded-lg dark:border-neutral-700">
+            <div class="relative z-10 size-10 flex justify-center items-center mb-3">
+              <img src="https://logospng.org/download/cruzeiro-do-sul/logo-cruzeiro-do-sul-estrela-1024.png">
+            </div>
+
+            <h3 class="mb-1 text-xs text-gray-600 dark:text-neutral-400">
+              2019 - 2021
+            </h3>
+
+            <p class="font-semibold text-sm text-gray-800 dark:text-neutral-200">
+                Tecnólogo em Análise e Desenvolvimento de Sistemas
+            </p>
+
+            <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">
+                Universidade Cruzeiro do Sul
+            </p>
+          </div>
+
+        </div>
+        <!-- End Grid -->
+      </div>
+      <!-- End Education -->
     </div>
   </main>
   <!-- ========== END MAIN CONTENT ========== -->
@@ -764,5 +935,44 @@ assinatura e auditoria de contratos.
   <!-- JS PLUGINS -->
   <!-- Required plugins -->
   <script src="https://cdn.jsdelivr.net/npm/preline/dist/preline.min.js"></script>
+  <script>
+    document.querySelectorAll('[data-project-carousel]').forEach((carousel) => {
+      const track = carousel.querySelector('[data-project-track]');
+      const slides = Array.from(carousel.querySelectorAll('.project-slide'));
+      const prevButton = carousel.querySelector('.project-carousel-prev');
+      const nextButton = carousel.querySelector('.project-carousel-next');
+      const dotsContainer = carousel.querySelector('[data-project-dots]');
+      const counter = carousel.querySelector('[data-project-count]');
+      let currentIndex = 0;
+
+      const dots = slides.map((slide, index) => {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'size-2 rounded-full bg-gray-300 transition-all hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400 dark:bg-neutral-700 dark:hover:bg-neutral-400';
+        dot.setAttribute('aria-label', `Ver projeto ${index + 1}`);
+        dot.addEventListener('click', () => updateCarousel(index));
+        dotsContainer.appendChild(dot);
+        return dot;
+      });
+
+      function updateCarousel(nextIndex) {
+        currentIndex = (nextIndex + slides.length) % slides.length;
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        counter.textContent = `${currentIndex + 1} / ${slides.length}`;
+
+        dots.forEach((dot, index) => {
+          const isActive = index === currentIndex;
+          dot.classList.toggle('w-5', isActive);
+          dot.classList.toggle('bg-gray-800', isActive);
+          dot.classList.toggle('dark:bg-neutral-200', isActive);
+          dot.setAttribute('aria-current', isActive ? 'true' : 'false');
+        });
+      }
+
+      prevButton.addEventListener('click', () => updateCarousel(currentIndex - 1));
+      nextButton.addEventListener('click', () => updateCarousel(currentIndex + 1));
+      updateCarousel(0);
+    });
+  </script>
 </body>
 </html>
