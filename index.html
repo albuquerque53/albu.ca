@@ -317,6 +317,10 @@
     }
 
     .retro-typewriter::after {
+      content: "";
+    }
+
+    .retro-typewriter[data-show-caret="true"]::after {
       content: "_";
       display: inline-block;
       margin-left: .18rem;
@@ -324,7 +328,7 @@
       animation: retro-caret 1s steps(1) infinite;
     }
 
-    .retro-typewriter[data-typing-done="true"]::after {
+    .retro-typewriter[data-show-caret="true"][data-typing-done="true"]::after {
       color: var(--retro-amber);
       animation-duration: 1.25s;
     }
@@ -1248,9 +1252,10 @@
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
       if (prefersReducedMotion) {
-        targets.forEach((target) => {
+        targets.forEach((target, index) => {
           target.classList.add('retro-typewriter');
           target.dataset.typingDone = 'true';
+          if (index === targets.length - 1) target.dataset.showCaret = 'true';
         });
         return;
       }
@@ -1276,6 +1281,7 @@
           if (charIndex >= text.length) {
             window.clearInterval(intervalId);
             target.dataset.typingDone = 'true';
+            if (index === targets.length - 1) target.dataset.showCaret = 'true';
             window.setTimeout(() => typeTarget(index + 1), 180);
           }
         }, speed);
