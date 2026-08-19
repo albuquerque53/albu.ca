@@ -39,9 +39,311 @@
 
   <!-- CSS Preline -->
   <link rel="stylesheet" href="https://preline.co/assets/css/main.min.css">
+  <style>
+    :root {
+      --retro-bg: #eff1f5;
+      --retro-panel: #e6e9ef;
+      --retro-panel-rgb: 230, 233, 239;
+      --retro-panel-soft: #ccd0da;
+      --retro-text: #4c4f69;
+      --retro-muted: #6c6f85;
+      --retro-line: #acb0be;
+      --retro-green: #40a02b;
+      --retro-amber: #df8e1d;
+      --retro-red: #d20f39;
+      --retro-shadow: #dce0e8;
+      --retro-grid: rgba(76, 79, 105, .08);
+      --retro-scanline: rgba(76, 79, 105, .04);
+      --retro-green-glow: rgba(64, 160, 43, .12);
+      --retro-amber-glow: rgba(223, 142, 29, .14);
+      --retro-control-bg: #eff1f5;
+      --retro-title-text: #4c4f69;
+    }
+
+    html.dark {
+      --retro-bg: #1e1e2e;
+      --retro-panel: #181825;
+      --retro-panel-rgb: 24, 24, 37;
+      --retro-panel-soft: #313244;
+      --retro-text: #cdd6f4;
+      --retro-muted: #a6adc8;
+      --retro-line: #45475a;
+      --retro-green: #a6e3a1;
+      --retro-amber: #f9e2af;
+      --retro-red: #f38ba8;
+      --retro-shadow: #11111b;
+      --retro-grid: rgba(205, 214, 244, .035);
+      --retro-scanline: rgba(205, 214, 244, .04);
+      --retro-green-glow: rgba(166, 227, 161, .12);
+      --retro-amber-glow: rgba(249, 226, 175, .1);
+      --retro-control-bg: #11111b;
+      --retro-title-text: #1e1e2e;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body.retro-site {
+      background:
+        linear-gradient(var(--retro-grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--retro-grid) 1px, transparent 1px),
+        radial-gradient(circle at 20% 0%, var(--retro-green-glow), transparent 28rem),
+        radial-gradient(circle at 90% 12%, var(--retro-amber-glow), transparent 24rem),
+        var(--retro-bg) !important;
+      background-size: 22px 22px, 22px 22px, auto, auto, auto;
+      color: var(--retro-text);
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    body.retro-site::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 60;
+      pointer-events: none;
+      background: repeating-linear-gradient(
+        to bottom,
+        var(--retro-scanline) 0,
+        var(--retro-scanline) 1px,
+        transparent 1px,
+        transparent 4px
+      );
+      mix-blend-mode: soft-light;
+      opacity: .32;
+    }
+
+    .retro-site header nav,
+    .retro-site main > div,
+    .retro-site footer > div {
+      position: relative;
+    }
+
+    .retro-site header nav {
+      background: var(--retro-panel) !important;
+      border: 2px solid var(--retro-amber) !important;
+      border-radius: 6px !important;
+      box-shadow: 6px 6px 0 var(--retro-shadow), 0 0 32px rgba(255, 191, 71, .12);
+    }
+
+    .retro-site main > div {
+      background: rgba(var(--retro-panel-rgb), .86);
+      border: 2px solid var(--retro-line);
+      border-radius: 6px;
+      box-shadow: 10px 10px 0 var(--retro-shadow);
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+    }
+
+    .retro-site h1,
+    .retro-site h2,
+    .retro-site h3,
+    .retro-site h5,
+    .retro-site p,
+    .retro-site li,
+    .retro-site span,
+    .retro-site a,
+    .retro-site dt,
+    .retro-site dd,
+    .retro-site div {
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    .retro-site h1,
+    .retro-site h2,
+    .retro-site h3,
+    .retro-site h5,
+    .retro-site .font-semibold,
+    .retro-site .font-medium {
+      color: var(--retro-text) !important;
+    }
+
+    .retro-site h1::before {
+      content: "> ";
+      color: var(--retro-green);
+    }
+
+    .retro-site h2 {
+      border-bottom: 2px dashed var(--retro-line);
+      padding-bottom: .45rem;
+    }
+
+    .retro-site h2::before {
+      content: "# ";
+      color: var(--retro-amber);
+    }
+
+    .retro-site p,
+    .retro-site li,
+    .retro-site .text-gray-500,
+    .retro-site .text-gray-600,
+    .retro-site .text-gray-800,
+    .retro-site .dark\:text-neutral-200,
+    .retro-site .dark\:text-neutral-400,
+    .retro-site .dark\:text-neutral-500 {
+      color: var(--retro-muted) !important;
+    }
+
+    .retro-site a {
+      color: var(--retro-green) !important;
+      text-decoration-color: var(--retro-green) !important;
+      text-underline-offset: 3px;
+    }
+
+    .retro-site a:hover {
+      color: var(--retro-amber) !important;
+      text-decoration-color: var(--retro-amber) !important;
+    }
+
+    .retro-site svg {
+      color: var(--retro-amber);
+    }
+
+    .retro-site .space-y-3 svg {
+      color: inherit !important;
+    }
+
+    .retro-site .space-y-3 svg path {
+      fill: currentColor !important;
+    }
+
+    .retro-site .rounded-lg,
+    .retro-site .rounded-\[2rem\],
+    .retro-site .rounded-full {
+      border-radius: 6px !important;
+    }
+
+    .retro-site .border,
+    .retro-site .border-y,
+    .retro-site .border-gray-200,
+    .retro-site .dark\:border-neutral-700 {
+      border-color: var(--retro-line) !important;
+    }
+
+    .retro-site [class*="bg-gray-50"],
+    .retro-site [class*="bg-gray-100"],
+    .retro-site [class*="dark:bg-neutral-800"],
+    .retro-site [class*="dark:bg-neutral-900"] {
+      background-color: var(--retro-panel-soft) !important;
+    }
+
+    .retro-site article,
+    .retro-site .p-4.border,
+    .retro-site blockquote,
+    .retro-site .project-slide {
+      background: rgba(var(--retro-panel-rgb), .95) !important;
+      box-shadow: 5px 5px 0 var(--retro-shadow);
+    }
+
+    .retro-site article img,
+    .retro-site [data-project-track] img {
+      border-bottom: 2px solid var(--retro-line);
+      filter: contrast(1.08) saturate(.88);
+    }
+
+    .retro-site .inline-flex.rounded-full {
+      background: var(--retro-control-bg) !important;
+      border: 1px solid var(--retro-line) !important;
+      color: var(--retro-green) !important;
+      box-shadow: 2px 2px 0 var(--retro-shadow);
+    }
+
+    .retro-site .inline-flex.rounded-full:last-child {
+      color: var(--retro-amber) !important;
+    }
+
+    .retro-site button {
+      background: var(--retro-control-bg) !important;
+      border: 2px solid var(--retro-line) !important;
+      border-radius: 6px !important;
+      color: var(--retro-green) !important;
+      box-shadow: 3px 3px 0 var(--retro-shadow);
+    }
+
+    .retro-site button:hover {
+      border-color: var(--retro-amber) !important;
+      color: var(--retro-amber) !important;
+      transform: translate(-1px, -1px);
+    }
+
+    .retro-site [data-project-dots] button {
+      width: .65rem;
+      height: .65rem;
+      border: 1px solid var(--retro-line) !important;
+      border-radius: 2px !important;
+      background: var(--retro-panel-soft) !important;
+      box-shadow: none;
+    }
+
+    .retro-site [data-project-dots] button[aria-current="true"] {
+      width: 1.4rem;
+      background: var(--retro-green) !important;
+      box-shadow: 0 0 12px rgba(125, 242, 166, .55);
+    }
+
+    .retro-site [data-project-count] {
+      color: var(--retro-amber) !important;
+    }
+
+    .retro-site .after\:bg-gray-200::after,
+    .retro-site .dark\:after\:bg-neutral-700::after {
+      background-color: var(--retro-line) !important;
+    }
+
+    .retro-site img[src*="logo"],
+    .retro-site img[src*="picpay"],
+    .retro-site img[src*="idez"],
+    .retro-site img[src*="mova"],
+    .retro-site img[src*="serasa"] {
+      background: var(--retro-text);
+      border: 1px solid var(--retro-line);
+      padding: 2px;
+    }
+
+    .retro-site footer > div {
+      border-color: var(--retro-line) !important;
+    }
+
+    .retro-site .divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
+      border-color: var(--retro-line) !important;
+    }
+
+    .retro-typewriter {
+      display: inline-block;
+      min-height: 1.25em;
+      white-space: nowrap;
+    }
+
+    .retro-typewriter::after {
+      content: "_";
+      display: inline-block;
+      margin-left: .18rem;
+      color: var(--retro-green);
+      animation: retro-caret 1s steps(1) infinite;
+    }
+
+    .retro-typewriter[data-typing-done="true"]::after {
+      color: var(--retro-amber);
+      animation-duration: 1.25s;
+    }
+
+    @keyframes retro-caret {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .retro-typewriter::after {
+        animation: none;
+      }
+    }
+  </style>
 </head>
 
-<body class="dark:bg-neutral-900">
+<body class="retro-site dark:bg-neutral-900">
   <!-- ========== HEADER ========== -->
   <header class="sticky top-0 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm">
     <nav class="mt-4 relative max-w-2xl w-full bg-white border border-gray-200 rounded-[2rem] mx-2 py-2.5 md:flex md:items-center md:justify-between md:py-0 md:px-4 md:mx-auto dark:bg-neutral-900 dark:border-neutral-700">
@@ -88,10 +390,10 @@
         </div>
 
         <div class="grow">
-          <h1 class="text-lg font-medium text-gray-800 dark:text-neutral-200">
+          <h1 class="text-lg font-medium text-gray-800 dark:text-neutral-200" data-typewriter data-typewriter-speed="38">
             Gabriel de Albuquerque (Albuca)
           </h1>
-          <p class="text-sm text-gray-600 dark:text-neutral-400">
+          <p class="text-sm text-gray-600 dark:text-neutral-400" data-typewriter data-typewriter-speed="42">
             Engenheiro de Software
           </p>
         </div>
@@ -434,7 +736,7 @@
             <dd>
               <ul>
                 <li class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                  Desenvolvimento back-end
+                  Spec-Driven Development com I.A
                 </li>
                 <li class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
                   Sistemas multi-tenant
@@ -941,6 +1243,72 @@
   <!-- Required plugins -->
   <script src="https://cdn.jsdelivr.net/npm/preline/dist/preline.min.js"></script>
   <script>
+    function runTypewriterSequence() {
+      const targets = Array.from(document.querySelectorAll('[data-typewriter]'));
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (prefersReducedMotion) {
+        targets.forEach((target) => {
+          target.classList.add('retro-typewriter');
+          target.dataset.typingDone = 'true';
+        });
+        return;
+      }
+
+      targets.forEach((target) => {
+        target.dataset.typewriterText = target.textContent.trim();
+        target.textContent = '';
+        target.classList.add('retro-typewriter');
+      });
+
+      function typeTarget(index) {
+        const target = targets[index];
+        if (!target) return;
+
+        const text = target.dataset.typewriterText || '';
+        const speed = Number(target.dataset.typewriterSpeed) || 40;
+        let charIndex = 0;
+
+        const intervalId = window.setInterval(() => {
+          target.textContent = text.slice(0, charIndex + 1);
+          charIndex += 1;
+
+          if (charIndex >= text.length) {
+            window.clearInterval(intervalId);
+            target.dataset.typingDone = 'true';
+            window.setTimeout(() => typeTarget(index + 1), 180);
+          }
+        }, speed);
+      }
+
+      typeTarget(0);
+    }
+
+    runTypewriterSequence();
+
+    function setRetroTheme(theme) {
+      const nextTheme = theme === 'dark' ? 'dark' : 'light';
+      document.documentElement.classList.remove('light', 'dark');
+      document.documentElement.classList.add(nextTheme);
+      localStorage.setItem('hs_theme', nextTheme);
+
+      document.querySelectorAll('[data-hs-theme-click-value]').forEach((button) => {
+        const isTargetTheme = button.getAttribute('data-hs-theme-click-value') === nextTheme;
+        button.style.display = isTargetTheme ? 'none' : 'flex';
+      });
+    }
+
+    const initialRetroTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+    setRetroTheme(initialRetroTheme);
+
+    document.querySelectorAll('[data-hs-theme-click-value]').forEach((button) => {
+      button.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        setRetroTheme(button.getAttribute('data-hs-theme-click-value'));
+      }, true);
+    });
+
     document.querySelectorAll('[data-project-carousel]').forEach((carousel) => {
       const track = carousel.querySelector('[data-project-track]');
       const slides = Array.from(carousel.querySelectorAll('.project-slide'));
